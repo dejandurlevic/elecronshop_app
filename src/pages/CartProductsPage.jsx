@@ -16,14 +16,14 @@ function CartProductsPage() {
     return (
         <div>
             <div className='container mx-auto'>
-                <div className='flex gap-8 mt-[50px]'>
-                    <div className='w-[60%]  flex flex-col gap-5'>
+                <div className='block md:flex gap-8 mt-[50px]'>
+                    <div className='w-[100%] md:w-[60%]  flex flex-col gap-5'>
                         {cart.length >= 1 ? cart.map((el, index) => {
                             return <CartItemComponents key={el.id} item={el} index={index} />
                         }) : <h2 className='text-center font-bold text-mainBlue text-4xl uppercase'>No Products In Cart...</h2>}
                     </div>
 
-                    <div className='w-[40%]'>
+                    <div className='w-[100%] md:w-[40%]'>
                         <h3>Total Price: ${dataCoupon === 'dejandurle' ? totalPrice / 2 : totalPrice}</h3>
 
                         <div className='mt-[20px] flex flex-col gap-5'>

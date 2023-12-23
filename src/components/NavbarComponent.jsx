@@ -26,26 +26,26 @@ function NavbarComponent() {
             
                 <InputComponents />
 
-                <div className='flex gap-7'>
+                <div className='flex gap-3'>
                     {localStorage.hasOwnProperty('elUser') ? <div>
                         <Link to='/profile'>
                             <img src={user.image} alt="" className='w-[50px] rounded-full border border-mainYellow object-cover' />
                         </Link>
                     </div> : <div className='flex items-center gap-1'>
                         <FaUser className='text-[#fff] text-2xl cursor-pointer' />
-                        <Link to='/login' className='text-[#fff] text-lg'>Sign In</Link>
+                        <Link to='/login' className='text-[#fff]  text-lg'>Sign In</Link>
                     </div>}
 
 
                     <div className='flex items-center gap-1'>
                         <Link to='/favoriteProducts'>
-                            <FaHeart className='text-[#fff] text-2xl cursor-pointer' />
+                            <FaHeart className='text-[#fff] sm:text-xl md:text-2xl cursor-pointer' />
                         </Link>
                         <span className='bg-mainYellow text-[#fff] rounded-full px-[5px]'>{favoriteTotal}</span>
                     </div>
                     <div className='flex items-center gap-1'>
                         <Link to='/cartProducts'>
-                            <FaShoppingCart className='text-[#fff] text-2xl cursor-pointer' />
+                            <FaShoppingCart className='text-[#fff] sm:text-xl text-2xl cursor-pointer' />
                         </Link>
                         <span className='bg-mainYellow text-[#fff] rounded-full px-[5px]'>{totalProducts ? totalProducts : 0}</span>
                     </div>

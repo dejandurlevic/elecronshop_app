@@ -12,14 +12,14 @@ function CartItemComponents({ item, index }) {
             <Link to={`/productDetails/${item.id}`}>
                 <img src={item.thumbnail} alt={item.title} className='w-[100px] h-[100px]' />
             </Link>
-            <div>
+            <div className='w-[100px]'>
                 <p>{item.title}</p>
                 <p>{item.category}</p>
             </div>
 
             <h3>${item.price}</h3>
 
-            <div>
+            <div className='flex'>
                 <button className='px-[8px] py-[4px] bg-slate-400' onClick={() => dispatch(setPriceHandler({ increment: 1, index }))}>+</button>
                 <span className='px-[8px] py-[4px] bg-slate-400'>{item.count}</span>
                 <button className='px-[8px] py-[4px] bg-slate-400' onClick={() => dispatch(setPriceHandler({ increment: -1, index }))}> - </button>

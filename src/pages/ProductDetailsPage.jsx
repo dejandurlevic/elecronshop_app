@@ -60,19 +60,19 @@ function ProductDetailsPage() {
 
     return (
         <div className='h-[100vh]'>
-            <div className='container mx-auto flex mt-[50px] gap-[20px]'>
+            <div className='container mx-auto block md:flex mt-[50px] gap-[20px]'>
                 {/* images */}
-                <div className='w-[50%] flex flex-col'>
+                <div className='w-[100%] md:w-[50%] flex flex-col'>
                     <img src={product.images?.[currentImage]} alt="" className='w-full h-[500px] object-cover border-2 border-mainBlue p-3 rounded-[20px]' />
 
-                    <div className='flex items-center justify-between mt-[20px]'>
+                    <div className='w-[100%] flex items-center justify-between mt-[20px]'>
                         {product.images?.map((img, index) => {
-                            return <img key={index} src={img} className='w-[100px] h-[100px] border border-mainBlue p-2 rounded-[20px] cursor-pointer' onClick={() => setCurrentImage(index)} />
+                            return <img key={index} alt='' src={img} className='w-[80px] h-[100px] border border-mainBlue p-2 rounded-[20px] cursor-pointer' onClick={() => setCurrentImage(index)} />
                         })}
                     </div>
                 </div>
                 {/* description */}
-                <div className='w-[50%]'>
+                <div className='w-[100%] md:w-[50%]'>
                     <div className='flex flex-col gap-3'>
 
                         <div className='flex flex-col'>
