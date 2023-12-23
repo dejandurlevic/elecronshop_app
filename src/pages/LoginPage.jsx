@@ -50,7 +50,7 @@ function LoginPage() {
     return (
         <div>
             <h2 className='text-center my-[30px] text-mainBlue font-bold uppercase text-3xl'>Loggin Form</h2>
-            <h1 className='text-center my-[30px] text-mainBlue font-bold sm:text-sm md:text-3xl'>Sign in with username: kminchelle and password: 0lelplR to see all products</h1>
+            <h1 className='text-center my-[30px] text-mainBlue font-bold sm:text-sm md:text-3xl'>Sign in with username: kminchelle and password: 0lelplR to see all products.</h1>
             {/* start from here! */}
             <form onSubmit={formik.handleSubmit} className='border-2 border-mainYellow sm:w-[90%] md:w-[50%] mx-auto p-[20px] rounded-3xl flex flex-col items-center justify-center gap-5'>
                 {/* username */}
